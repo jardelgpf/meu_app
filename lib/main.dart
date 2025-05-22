@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:meu_app/Contador.dart';
 import 'package:meu_app/User.dart';
-import 'package:meu_app/stateless/Botao.dart';
-import 'package:meu_app/stateless/SemEstado.dart';
+import 'package:meu_app/inherited/UserInfos.dart';
+import 'package:meu_app/statefull/Botao.dart';
+import 'package:meu_app/statefull/DarkMode.dart';
+import 'package:meu_app/statefull/RandomNumber.dart';
+import 'package:meu_app/statefull/SemEstado.dart';
+import 'package:meu_app/statefull/ex1.dart';
 
 /*  void main() {
  runApp(Container(
@@ -43,8 +47,21 @@ void main() {
   runApp(User());
  } */
 
-runApp(MaterialApp(
+/* runApp(MaterialApp(
   home: Contador(),
 ));
+ */
+
+//runApp(DarkMode());
+//runApp(RandomNumber());
+
+ /* runApp(MaterialApp(
+    home: LojaAbertaFechada(),
+  
+  )); */
+
+  runApp(Userinfos());
+
+
 
 }
