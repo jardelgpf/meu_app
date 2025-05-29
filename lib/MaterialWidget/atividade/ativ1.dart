@@ -23,18 +23,14 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       title: 'Drogaria do Jarde',
       theme: ThemeData.light().copyWith(
-        scaffoldBackgroundColor: Colors.white, 
+        scaffoldBackgroundColor: Colors.white,
         primaryColor: Colors.green,
-        textTheme: TextTheme(
-          bodyLarge: TextStyle(color: Colors.black),
-        ),
+        textTheme: TextTheme(bodyLarge: TextStyle(color: Colors.black)),
       ),
       darkTheme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: Colors.black,
         primaryColor: Colors.green[800],
-        textTheme: TextTheme(
-          bodyLarge: TextStyle(color: Colors.white),
-        ),
+        textTheme: TextTheme(bodyLarge: TextStyle(color: Colors.white)),
       ),
       themeMode: _themeMode,
       home: HomePage(
@@ -70,28 +66,58 @@ class HomePage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home, color: Colors.white),
-              title: Text('Página Inicial', style: TextStyle(color: Colors.white)),
+              leading: Icon(
+                Icons.home,
+                color: const Color.fromARGB(255, 26, 186, 29),
+              ),
+              title: Text(
+                'Página Inicial',
+                style: TextStyle(color: const Color.fromARGB(255, 26, 186, 29)),
+              ),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.person, color: Colors.white),
-              title: Text('Perfil', style: TextStyle(color: Colors.white)),
+              leading: Icon(
+                Icons.person,
+                color: const Color.fromARGB(255, 26, 186, 29),
+              ),
+              title: Text(
+                'Perfil',
+                style: TextStyle(color: const Color.fromARGB(255, 26, 186, 29)),
+              ),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.settings, color: Colors.white),
-              title: Text('Configurações', style: TextStyle(color: Colors.white)),
+              leading: Icon(
+                Icons.settings,
+                color: const Color.fromARGB(255, 26, 186, 29),
+              ),
+              title: Text(
+                'Configurações',
+                style: TextStyle(color: const Color.fromARGB(255, 26, 186, 29)),
+              ),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.help, color: Colors.white),
-              title: Text('Ajuda', style: TextStyle(color: Colors.white)),
+              leading: Icon(
+                Icons.help,
+                color: const Color.fromARGB(255, 26, 186, 29),
+              ),
+              title: Text(
+                'Ajuda',
+                style: TextStyle(color: const Color.fromARGB(255, 26, 186, 29)),
+              ),
               onTap: () {},
             ),
             ListTile(
-              leading: Icon(Icons.info, color: Colors.white),
-              title: Text('Sobre', style: TextStyle(color: Colors.white)),
+              leading: Icon(
+                Icons.info,
+                color: const Color.fromARGB(255, 26, 186, 29),
+              ),
+              title: Text(
+                'Sobre',
+                style: TextStyle(color: const Color.fromARGB(255, 26, 186, 29)),
+              ),
               onTap: () {},
             ),
           ],
@@ -100,9 +126,10 @@ class HomePage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: isDarkMode
-                ? [Colors.black, Colors.green[800]!]
-                : [Colors.white, Colors.green],
+            colors:
+                isDarkMode
+                    ? [Colors.black, Colors.green[800]!]
+                    : [Colors.white, Colors.green],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -114,9 +141,10 @@ class HomePage extends StatelessWidget {
               'Bem-vindo ao Drogaria do Jarde!',
               style: TextStyle(
                 fontSize: 24,
-                color: Theme.of(context).brightness == Brightness.dark
-                    ? Colors.white
-                    : Colors.black,
+                color:
+                    Theme.of(context).brightness == Brightness.dark
+                        ? Colors.white
+                        : Colors.black,
               ),
             ),
             SizedBox(height: 20),
@@ -126,21 +154,20 @@ class HomePage extends StatelessWidget {
                 Text(
                   'Modo Claro',
                   style: TextStyle(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.white
-                        : Colors.black,
+                    color:
+                        Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.black,
                   ),
                 ),
-                Switch(
-                  value: isDarkMode,
-                  onChanged: onToggleTheme,
-                ),
+                Switch(value: isDarkMode, onChanged: onToggleTheme),
                 Text(
                   'Modo Escuro',
                   style: TextStyle(
-                    color: Theme.of(context).brightness == Brightness.dark
-                        ? Colors.white
-                        : Colors.black,
+                    color:
+                        Theme.of(context).brightness == Brightness.dark
+                            ? Colors.white
+                            : Colors.black,
                   ),
                 ),
               ],

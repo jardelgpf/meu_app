@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:meu_app/Botao.dart';
+import 'package:meu_app/Cupertino/MyCupertino.dart';
 import 'package:meu_app/MaterialWidget/MyMaterial.dart';
 import 'package:meu_app/MaterialWidget/atividade/ativ1.dart';
 import 'package:meu_app/exercicios/Loja.dart';
@@ -57,6 +60,12 @@ void main(){
   // runApp(UserInfos());
   //runApp(Loja());
 
-  runApp(MyApp());
+  //runApp(MyApp());
+
+  if(Platform.isAndroid){
+    runApp(MyMaterial());
+  } else {
+    runApp(MyCupertino());
+  }
 }
 
