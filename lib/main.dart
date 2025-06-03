@@ -9,6 +9,8 @@ import 'package:meu_app/MaterialWidget/MyMaterial.dart';
 import 'package:meu_app/MaterialWidget/atividade/ativ1.dart';
 import 'package:meu_app/exercicios/Loja.dart';
 import 'package:meu_app/inherited/UserInfos.dart';
+import 'package:meu_app/navegacao/Routes.dart';
+import 'package:meu_app/navegacao/Tela1.dart';
 import 'package:meu_app/stateful/Contador.dart';
 import 'package:meu_app/stateful/DarkMode.dart';
 import 'package:meu_app/stateful/RandomNumber.dart';
@@ -75,7 +77,11 @@ void main(){
  //runApp(layoutapp());
  //runApp(Fonts());
  //runApp(Imagem());
- runApp(const MaterialApp(home: Debug(numeroMaximo: 10),));
+ //runApp(const MaterialApp(home: Debug(numeroMaximo: 10),));
 
+
+ //navegando entre telas
+ //runApp(MaterialApp(home: Tela1(),));
+ runApp(Routes());
 }
 

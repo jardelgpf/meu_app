@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meu_app/navegacao/Tela2.dart';
 
 class Tela1 extends StatelessWidget {
   const Tela1({super.key});
@@ -11,9 +12,10 @@ class Tela1 extends StatelessWidget {
         child: ElevatedButton(
           child: const Text('Ir para Tela 2'),
           onPressed: (){
-            Navigator.push(context, MaterialPageRoute(
+          /*   Navigator.push(context, MaterialPageRoute(
               builder : (context) => const Tela2(),)
-            );
+            ); */
+            Navigator.pushNamed(context, '/tela2');
           },
         ),
       ),
