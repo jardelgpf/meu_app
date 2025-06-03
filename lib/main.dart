@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:meu_app/Botao.dart';
 import 'package:meu_app/Cupertino/MyCupertino.dart';
 import 'package:meu_app/Cupertino/widgetslayout/LayoutApp.dart';
+import 'package:meu_app/Debug.dart';
 import 'package:meu_app/MaterialWidget/MyMaterial.dart';
 import 'package:meu_app/MaterialWidget/atividade/ativ1.dart';
 import 'package:meu_app/exercicios/Loja.dart';
@@ -13,6 +14,8 @@ import 'package:meu_app/stateful/DarkMode.dart';
 import 'package:meu_app/stateful/RandomNumber.dart';
 import 'package:meu_app/stateless/SemEstado.dart';
 import 'package:meu_app/stateless/User.dart';
+import 'package:meu_app/usandoAssets/Fonts.dart';
+import 'package:meu_app/usandoAssets/imagem.dart';
 
 /* void main() {
   runApp(Container(
@@ -69,6 +72,10 @@ void main(){
     runApp(MyCupertino());
   } */
 
- runApp(layoutapp());
+ //runApp(layoutapp());
+ //runApp(Fonts());
+ //runApp(Imagem());
+ runApp(const MaterialApp(home: Debug(numeroMaximo: 10),));
+
 }
 

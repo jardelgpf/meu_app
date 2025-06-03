@@ -18,3 +18,12 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: AlumniSansSC
+      fonts:
+        - asset: assets\fonts\AlumniSansSC-Italic-VariableFont_wght.ttf
+        - asset: assets\fonts\AlumniSansSC-VariableFont_wght.ttf
+  assets:
+    - assets/images/
+
+
