@@ -20,7 +20,7 @@ class Tela2 extends StatelessWidget {
             ElevatedButton(
               child: Text('ir para a tela 1'),
               onPressed: (){
-                Navigator.pushNamed(context, '/');
+                Navigator.pushReplacementNamed(context, '/');
               },
             )
           ],

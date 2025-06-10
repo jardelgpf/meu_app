@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:meu_app/Botao.dart';
+import 'package:meu_app/exercicios/Botao.dart';
 import 'package:meu_app/Cupertino/MyCupertino.dart';
 import 'package:meu_app/Cupertino/widgetslayout/LayoutApp.dart';
-import 'package:meu_app/Debug.dart';
+import 'package:meu_app/exercicios/Debug.dart';
 import 'package:meu_app/MaterialWidget/MyMaterial.dart';
 import 'package:meu_app/MaterialWidget/atividade/ativ1.dart';
 import 'package:meu_app/exercicios/Loja.dart';
