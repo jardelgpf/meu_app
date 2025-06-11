@@ -1,0 +1,48 @@
+isolates sao a forma que o dar lida com concorrencia
+diferente de outras linguagens que usam threads 
+compartilhando memoria dart usa isolates, que sao unidades
+independentes de execucao com sua propriaa memoria e event loop.
+
+threads sao unidades basicas de execucao dentro de um processo.
+elas compartilham o mesmo espaco de memoria do processo
+principal, o que perite comunicacao rapida entre elas, mas
+tambem pode  causar condicoes de corrida (race conditions) e
+outros problemas de concorrencia.
+
+EXPLICACAO TECNICA
+um isolate tem seu proprio heap e stack
+
+stack e usado para armazenar:
+- variaveis locais
+- chamadas de funcao
+- endecos de retorno
+
+caracteristicas:
+- estrutura LIFO (last in, first out)
+- alocacao e desalocacao automatica e rapida
+- tamanho limitado
+- vida curta (emquamto a fumcao estiver ativa)
+
+heap e usado para armazenar
+- objetos complexos
+- instancias que precisam viver mais tempo
+- alocacoes dinamicas
+
+caracteristicas:
+- gerenciada por garbage collector(coletor de lixo)
+- mais lento que stack
+- tamanho geralmente menor
+- permite alocacao dinamica de memoria
+
+a comunicacao entre isolates ocorre por meio de mensagens (message passing) e
+nao ha compartilhamento direto da memoria.
+o isolate principal que roda o UI nao deve ser bloqueado com tarefas pesadas
+coomo parsing de JSON gigante ou calculo matematico pesado
+para evitar isso, voce deve rodar essas tarefas em isolates secundarios,
+garantindo uma itnerface fluida.
+
+quando usar isolates?
+- parsing de arquivos grandes(JSON, XML, CSV)
+- calculos matematicos pesados.
+- processamento de imagem(filtros, compressao)
+- manipilacao de arquivos grandes(leitura, escrita, compressao e gravacao)

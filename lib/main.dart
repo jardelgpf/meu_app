@@ -1,6 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:meu_app/dartAvancado/future/login.dart';
+import 'package:meu_app/dartAvancado/isolate/product_parse.dart';
+import 'package:meu_app/dartAvancado/stream/busca_com_stream.dart';
 import 'package:meu_app/exercicios/Botao.dart';
 import 'package:meu_app/Cupertino/MyCupertino.dart';
 import 'package:meu_app/Cupertino/widgetslayout/LayoutApp.dart';
@@ -82,6 +85,9 @@ void main(){
 
  //navegando entre telas
  //runApp(MaterialApp(home: Tela1(),));
- runApp(Routes());
+// runApp(Routes());
+//runApp(MaterialApp(home: BuscaComStream()));
+
+runApp(MaterialApp(home: ProductParse(),));
 }
 
