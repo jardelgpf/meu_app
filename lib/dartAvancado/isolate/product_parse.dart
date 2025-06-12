@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:isolate';
 
 import 'package:flutter/material.dart';
 
@@ -17,12 +18,25 @@ void initState(){
   super.initState();
   _items = loadJson();
 }
+
 //ler os dados do JSON sem isolate
-Future<List<dynamic>> loadJson() async{
+/* Future<List<dynamic>> loadJson() async{
   final jsonString = await DefaultAssetBundle.of(context)
     .loadString('assets/data.json'); 
   final parsed = json.decode(jsonString);
   return parsed['items'] as List<dynamic>;
+} */
+
+//USANDO ISOLATE
+
+Future<List<dynamic>> loadJson()async{
+  final jsonString = await DefaultAssetBundle.of(context)
+  .loadString('assets/data.json');
+
+  return await Isolate.run((){
+    final parsed = json.decode(jsonString);
+    return parsed['items'] as List<dynamic>;
+  });
 }
 
   @override
